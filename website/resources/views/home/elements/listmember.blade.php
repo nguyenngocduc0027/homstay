@@ -1,4 +1,4 @@
-<section class="pt-10">
+<section class="pt-10 gray-bg">
     <div class="container">
 
         <div class="row justify-content-start">

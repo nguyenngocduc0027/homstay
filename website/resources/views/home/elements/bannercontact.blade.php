@@ -1,4 +1,4 @@
-<section class="pt-0">
+<section class="pt-0 gray-bg">
     <div class="container" >
 
         <div class="row justify-content-center">

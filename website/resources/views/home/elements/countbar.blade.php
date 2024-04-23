@@ -1,4 +1,4 @@
-<section class="bg-light">
+<section class="gray-bg">
     <div class="container">
 
         <div class="row align-items-center justify-content-between">
