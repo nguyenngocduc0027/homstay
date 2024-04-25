@@ -21,17 +21,27 @@
                     </span>
                 </div>
                 <div class="login-form">
-                    <form>
-
+                    <form method="POST" action="{{ route('do-login')}}">
+                        @csrf
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" placeholder="name@example.com">
+                            <input type="email" class="form-control" placeholder="name@example.com" name="email" value="{{old('email')}}" autocomplete="email" required>
                             <label>Email address</label>
                         </div>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
 
                         <div class="form-floating mb-3">
-                          <input type="password" class="form-control" placeholder="Password">
+                          <input type="password" class="form-control" placeholder="Password" name="password" autocomplete="current-password" required>
                           <label>Password</label>
                         </div>
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
 
                         <div class="form-group mb-3">
                             <div class="d-flex align-items-center justify-content-between">
@@ -48,7 +58,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="button" class="btn btn-lg btn-primary fw-medium full-width rounded-2">LogIn</button>
+                            <button type="submit" class="btn btn-lg btn-primary fw-medium full-width rounded-2">LogIn</button>
                         </div>
 
                     </form>

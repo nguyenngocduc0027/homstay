@@ -2874,8 +2874,8 @@ nav a:hover {
     padding:13px 12px;
     display: inline-block;
     transition: color .3s, background .3s;
-    font-weight: 500;
-	font-size: 14px;
+    font-weight: 700;
+	font-size: 16px;
 }
 
 .navigation-portrait .nav-menu>li>a {
@@ -3258,7 +3258,7 @@ nav a:hover {
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
     font-family: 'Jost', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 #navigation span.label-new {
     font-size: 11px;
