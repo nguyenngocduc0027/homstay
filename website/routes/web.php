@@ -16,10 +16,17 @@ Route::get('/news', [HomeController::class,'news'])->name('news');
 Route::get('/contact', [HomeController::class,'contact'])->name('contact');
 
 //Authencation
-
+Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::post('/do-register', [AuthController::class, 'do_register'])->name('do-register');
+Route::get('/forgot', [AuthController::class, 'forgot_password'])->name('forgot');
+Route::post('/do-forgot', [AuthController::class, 'do_forgot_password'])->name('do-forgot');
 Route::post('/do-login', [AuthController::class,'login'])->name('do-login');
 Route::get('/logout', [AuthController::class,'logout'])->name('logout');
 
 // Nav
 Route::get('/dashboard', [AdminController::class,'index'])->name('dashboard');
 Route::get('/profile', [UserController::class,'profile'])->name('profile');
+Route::get('/my_profile', [UserController::class, 'my_profile'])->name('my-profile');
+Route::get('/contract', [UserController::class, 'contract'])->name('contract');
+Route::get('/bill', [UserController::class, 'bill'])->name('bill');
+Route::get('/reset-password', [UserController::class, 'reset_password'])->name('reset-password');

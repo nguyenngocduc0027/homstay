@@ -70,7 +70,6 @@
                                     <a href="{{route('dashboard')}}"><i class="fa-solid fa-gauge"></i>Dashboard</a>
                                     @endif
                                     <a href="{{route('profile')}}"><i class="fa-solid fa-address-card"></i>My Profile</a>
-                                    <a href=""><i class="fa-solid fa-building-circle-check"></i>My Room</a>
                                     <a href="{{route('logout')}}"><i class="fa-solid fa-unlock"></i>Logout</a>
                                 </div>
                             </div>
