@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ResetPassword;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Password;
@@ -68,15 +69,17 @@ class AuthController extends Controller
 
         if (User::where('email', '=', $request->email)->exists()) {
             $random = Str::random(8);
-            $from = 'nguyenngocduc.tosa@gmail.com';
-            $subject = 'Reset Password';
-            $data = array(
-                'contents' => 'Your new password is '.$random,
-            );
-
             $user_mail = User::where('email', $request->email)->first();
             $user_mail->password = Hash::make($random);
             $user_mail->save();
+
+            $toEmail = $user_mail->email;
+            $message = 'Your New Password is '.$random;
+            $subject = 'Your Account Password is Reset!';
+
+            $d = Mail::to($toEmail)->send(new ResetPassword($message, $subject));
+
+            return redirect('/')->with('success', 'Email da gui!');
 
         } else {
             return redirect()->back()->with('error', 'Email khong ton tai!');
