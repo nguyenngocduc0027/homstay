@@ -38,7 +38,8 @@
 /*------------------------------------
 	Fonts
 ------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700;800&amp;display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 
 /*------------------------------------
 	Preloader
@@ -136,7 +137,7 @@ body {
 	background: #ffffff;
 	color:#4e5c79;
 	font-size:15px;
-	font-family: 'Jost', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin: 0;
 	overflow-x: hidden !important;
 	font-weight: 400;
@@ -288,7 +289,7 @@ h6 {
 	color:#0c2339;
 	font-weight:700;
 	text-transform: capitalize;
-	font-family: 'Jost', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h5,
@@ -297,7 +298,7 @@ h6 {
 }
 
 .font-2{
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -329,7 +330,7 @@ h6 {
 	font-size:20px !important;
 }
 .lead-i{
-    font-family: 'Lora', serif;
+    font-family: 'Roboto', serif;
 	font-size:22px !important;
 	font-style:italic;
 }
@@ -3257,7 +3258,7 @@ nav a:hover {
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
 #navigation span.label-new {
@@ -3746,7 +3747,7 @@ ul:last-child {
 .hero-banner {
     padding:5em 0 5em;
     display: flex;
-	min-height:600px;
+	min-height:500px;
     justify-content: center;
     align-items: center;
 }
@@ -4293,7 +4294,7 @@ ul:last-child {
 h1.italian-header-capt {
 	font-weight: 500;
     margin: 0 auto;
-    font-family: 'Lora', serif;
+    font-family: 'Roboto', serif;
     font-style: italic;
     font-size: 50px;
     margin-bottom: 1em;
@@ -4811,7 +4812,7 @@ form.search-big-form.search-shadow, form.search-form.search-shadow {
     font-size: 14px;
     font-weight: 500;
     color: #053864;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .hero-search-content.side-form .form-control::-webkit-input-placeholder{color:#6877a5;}
 .hero-search-content.side-form .form-control:-ms-input-placeholder{color:#6877a5;}
@@ -5027,7 +5028,7 @@ form.search-big-form.search-shadow, form.search-form.search-shadow {
     font-size: 17px;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-family: "Campton W00 Bold","Helvetica Neue",arial,sans-serif;
+    font-family: "Roboto",sans-serif;
     font-weight: 400;
     font-style: normal;
     line-height: 1.3;
@@ -5295,7 +5296,7 @@ span.tag_t {
     font-size: 14px;
     line-height: 18px;
 	color: #828aaf;
-    font-family: 'Jost', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 .content_block_2 .content-box .btn-box .download-btn h3 {
@@ -7141,7 +7142,7 @@ a.classical-cats-boxs {
 .single-item-reviews-desc p {
     font-size: 19px;
     margin: 0;
-    font-family: 'Jost';
+    font-family: 'Roboto';
     font-style: initial;
 }
 .single-item-reviews-info h4{
@@ -7768,7 +7769,7 @@ span.mod-close {
 }
 .bl-continue {
     position: relative;
-    font-family: 'Lora', serif;
+    font-family: 'Roboto', serif;
     font-style: italic;
     font-size: 20px;
     margin-top: 12px;
@@ -8319,7 +8320,7 @@ h3.pa-name {
     line-height: 1;
 }
 .st-author-info .st-author-subtitle {
-    font-family: 'Lora', serif;
+    font-family: 'Roboto', serif;
     font-style: italic;
     font-size: 12px;
 }
@@ -8357,7 +8358,7 @@ h3.pa-name {
 	font-weight:700;
 }
 .pricing-header .pr-subtitle{
-    font-family: 'Lora', serif;
+    font-family: 'Roboto', serif;
     font-style: italic;
     font-size: 16px;
     letter-spacing: 1px;
@@ -8506,7 +8507,7 @@ h3.pa-name {
     font-size: 14px;
     display: inline-block;
     font-weight: 600;
-	font-family:'Jost', sans-serif;
+	font-family:'Roboto', sans-serif;
 }
 .d-navigation ul li a i{
 	margin-right:10px;

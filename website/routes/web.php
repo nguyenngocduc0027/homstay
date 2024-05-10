@@ -30,3 +30,7 @@ Route::get('/my_profile', [UserController::class, 'my_profile'])->name('my-profi
 Route::get('/contract', [UserController::class, 'contract'])->name('contract');
 Route::get('/bill', [UserController::class, 'bill'])->name('bill');
 Route::get('/reset-password', [UserController::class, 'reset_password'])->name('reset-password');
+
+
+//Admin
+Route::get('/account', [AdminController::class,'account'])->name('account');

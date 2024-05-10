@@ -35,24 +35,23 @@
             <div class="nav-menus-wrapper" style="transition-property: none;">
                 <ul class="nav-menu">
 
-                    <li class="active"><a href="{{route('index')}}">Home<span class="submenu-indicator"></span></a>
-                    </li>
+                    <li class="active"><a href="{{route('index')}}">Trang chủ</a></li>
 
-                    <li><a href="#">About Us<span class="submenu-indicator"></span></a>
+                    <li><a href="#">Về chúng tôi<span class="submenu-indicator"></span></a>
                         <ul class="nav-dropdown nav-submenu">
-                            <li><a class="active" href="{{route('info')}}">Informations</a></li>
-                            <li><a href="{{route('team')}}">Team</a></li>
-                            <li><a href="{{route('app')}}">Download Application</a></li>
+                            <li><a class="active" href="{{route('info')}}">Giới thiệu</a></li>
+                            <li><a href="{{route('team')}}">Nhân sự</a></li>
+                            <li><a href="{{route('app')}}">Ứng dụng DingDong</a></li>
                         </ul>
                     </li>
 
-                    <li class=""><a href="{{route('room')}}">Room<span class="submenu-indicator"></span></a>
+                    <li class=""><a href="{{route('room')}}">Phòng trọ<span class="submenu-indicator"></span></a>
                     </li>
 
-                    <li class=""><a href="{{route('news')}}">News<span class="submenu-indicator"></span></a>
+                    <li class=""><a href="{{route('news')}}">Tin tức<span class="submenu-indicator"></span></a>
                     </li>
 
-                    <li class=""><a href="{{route('contact')}}">Contacts<span class="submenu-indicator"></span></a>
+                    <li class=""><a href="{{route('contact')}}">Liên hệ<span class="submenu-indicator"></span></a>
                     </li>
 
                 </ul>
@@ -63,14 +62,14 @@
                             <div class="btn-group account-drop">
                                 <button type="button" class="btn btn-order-by-filt dropdown-toggle" id="showbutton"
                                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="{{Auth()->user()->avatar}}" class="avater-img" alt="">Hi, {{Auth()->user()->name}}
+                                    <img src="{{Auth()->user()->avatar}}" class="avater-img" alt="">Chào {{Auth()->user()->name}}
                                 </button>
                                 <div class="dropdown-menu pull-right animated flipInX" id="showing" style="">
                                     @if (Auth()->user()->type != '0')
-                                    <a href="{{route('dashboard')}}"><i class="fa-solid fa-gauge"></i>Dashboard</a>
+                                    <a href="{{route('dashboard')}}"><i class="fa-solid fa-gauge"></i>Bảng điều khiển</a>
                                     @endif
-                                    <a href="{{route('profile')}}"><i class="fa-solid fa-address-card"></i>My Profile</a>
-                                    <a href="{{route('logout')}}"><i class="fa-solid fa-unlock"></i>Logout</a>
+                                    <a href="{{route('profile')}}"><i class="fa-solid fa-address-card"></i>Thông tin cá nhân</a>
+                                    <a href="{{route('logout')}}"><i class="fa-solid fa-unlock"></i>Đăng xuất</a>
                                 </div>
                             </div>
                         </li>
@@ -91,7 +90,7 @@
                                             d="M8 5V6C8 6.55228 8.44772 7 9 7C9.55228 7 10 6.55228 10 6C10 5.44772 10.4477 5 11 5H18C18.5523 5 19 5.44772 19 6V18C19 18.5523 18.5523 19 18 19H11C10.4477 19 10 18.5523 10 18C10 17.4477 9.55228 17 9 17C8.44772 17 8 17.4477 8 18V19C8 20.1046 8.89543 21 10 21H19C20.1046 21 21 20.1046 21 19V5C21 3.89543 20.1046 3 19 3H10C8.89543 3 8 3.89543 8 5Z"
                                             fill="currentColor" />
                                     </svg>
-                                </span>LogIn/SignUp
+                                </span>Đăng nhập
                             </a>
                         </li>
                     </ul>
