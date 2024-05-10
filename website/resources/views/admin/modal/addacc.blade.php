@@ -11,8 +11,34 @@
                     </a>
                 </div>
                 <div class="modal-body">
-                    <p>Woohoo, You are readng this text in a modal! Use Bootstrap’s JavaScript modal plugin to add
-                        dialogs to your site for lightboxes, user notifications, or completely custom content.</p>
+                    <form>
+                        <div class="form-row">
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+                                <label for="validationCustom03">Họ Tên</label>
+                                <input type="text" class="form-control" id="validationCustom03" placeholder="Họ Tên" name="name"
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Please provide a valid name.
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+                                <label for="validationCustom04">Email</label>
+                                <input type="email" class="form-control" id="validationCustom04" placeholder="example@email.com" name="email"
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Please provide a valid email.
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
+                                <label for="validationCustom05">Số Điện Thoại</label>
+                                <input type="phone" class="form-control" id="validationCustom05" placeholder="03x-xxx-xxxx" name="phone"
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Please provide a valid phone number.
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-secondary" data-dismiss="modal">Close</a>

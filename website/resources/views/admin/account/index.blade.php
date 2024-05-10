@@ -29,7 +29,7 @@
                                     <td>2011/04/25</td>
                                     <td>
                                         <a href="#" class="btn btn-primary" data-toggle="modal"
-                                            data-target="#exampleModal">
+                                            data-target="#viewacc">
                                             <i class="fa fa-eye"></i>
                                         </a>
                                         <a href="#" class="btn btn-primary">
