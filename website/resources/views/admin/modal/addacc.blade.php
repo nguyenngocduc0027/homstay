@@ -42,9 +42,9 @@
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom03">Loại Tài Khoản</label>
                                 <select class="form-control" name="type">
-                                    <option>0</option>
-                                    <option>1</option>
-                                    <option>2</option>
+                                    <option value="0">User</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Super Admin</option>
                                   </select>
                                 <div class="invalid-feedback">
                                     Please provide a valid.
@@ -61,8 +61,8 @@
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom05">Giới Tính</label>
                                 <select class="form-control" name="gender">
-                                    <option>Nam</option>
-                                    <option>Nữ</option>
+                                    <option value="nam">Nam</option>
+                                    <option value="nu">Nữ</option>
                                   </select>
                                 <div class="invalid-feedback">
                                     Please provide a valid gender.
@@ -74,6 +74,26 @@
                                     required="">
                                 <div class="invalid-feedback">
                                     Please provide a valid phone number.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
+                                <label for="validationCustom03">Ảnh đại diện</label>
+                                <div>
+                                    <div class="d-flex justify-content-center mb-4">
+                                        <img id="selectedAvatar" src="https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg"
+                                        class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover;" alt="example placeholder" />
+                                    </div>
+                                    <div class="d-flex justify-content-center">
+                                        <div data-mdb-ripple-init class="btn btn-primary btn-rounded">
+                                            <label class="form-label text-white m-1" for="customFile2">Choose file</label>
+                                            <input type="file" class="form-control d-none" id="customFile2" onchange="displaySelectedImage(event, 'selectedAvatar')" name="avatar" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please provide a valid.
                                 </div>
                             </div>
                         </div>

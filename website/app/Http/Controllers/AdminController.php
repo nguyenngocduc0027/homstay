@@ -12,7 +12,7 @@ class AdminController extends Controller
     }
 
     public function account(User $user){
-        $data_user = User::all();
+        $data_user = User::orderBy('id', 'DESC')->get();
         return view("admin.account.index", compact('data_user'));
     }
 }
