@@ -17,12 +17,7 @@
                             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom03">Họ Tên</label>
                                 <input type="text" class="form-control" id="validationCustom03" placeholder="Họ Tên"
-                                    name="name" >
-                                    <ul class="error">
-                                        @foreach($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                        @endforeach
-                                    </ul>
+                                    name="name" value="{{old('name')}}">
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom04">Email</label>

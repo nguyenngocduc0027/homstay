@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Http\RedirectResponse;
+
 
 class AdminController extends Controller
 {
@@ -17,13 +19,14 @@ class AdminController extends Controller
         return view("admin.account.index", compact('data_user'));
     }
 
-    public function add_account(Request $request){
+    public function add_account(Request $request): RedirectResponse {
 
         $request->validate([
             'name' => 'required|integer',
             'email' => 'required|email',
             'phone_no' => 'required|max:10',
           ]);
+
 
         $image_citizen = array();
         if ($files=$request->file('image_citizen_id')) {
@@ -56,6 +59,7 @@ class AdminController extends Controller
             'image_citizen_id'=>json_encode( $image_citizen),
             'avatar'=>json_encode($avatar),
         ]);
+
         return redirect()->back()->with('success', 'Your account has been created successfully!');
     }
 }
