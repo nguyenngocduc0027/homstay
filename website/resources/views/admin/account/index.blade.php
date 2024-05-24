@@ -30,9 +30,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @php
-                                            $count = 1;
-                                            @endphp
+                                            <?php $count = 1; ?>
                                             @foreach ($data_user as $user)
                                             <tr>
                                                 <td>{{$count++}}</td>
