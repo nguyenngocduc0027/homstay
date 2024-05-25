@@ -86,6 +86,7 @@
     </div>
     @include('admin.modal.addacc')
     @include('admin.modal.viewacc')
+    @include('admin.modal.deleteacc')
     <!-- ============================================================== -->
     <!-- end main wrapper  -->
     <!-- ============================================================== -->

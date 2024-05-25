@@ -55,7 +55,8 @@
                                                     <a href="#" class="btn btn-primary">
                                                         <i class="fa fa-edit"></i>
                                                     </a>
-                                                    <a href="#" class="btn btn-primary">
+                                                    <a href="#" class="btn btn-primary" data-class-id="{{ $user->id }}" data-toggle="modal"
+                                                        data-target="#deleteacc">
                                                         <i class="fa fa-trash"></i>
                                                     </a>
                                                 </td>
