@@ -38,7 +38,8 @@
                                                 <tr>
                                                     <td>{{ $count++ }}</td>
                                                     <td>
-                                                        <img src="{{$user->avatar}}" alt="Responsive image" width="100px">
+                                                        <img src="{{$user->avatar}}" alt="Responsive image" width="100px" height="100px" style="object-fit: fill">
+
                                                     </td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>

@@ -45,14 +45,14 @@ class AdminController extends Controller
                     $path = '/images/citizen_id/' . $names;
                     $image_citizen[] = $path;
                 }
+                // dd($image_citizen);
             }
-
-            $avatar = array();
             if ($filess = $request->file('avatar')) {
                 $namess = $request->name . 'avatar' . '.' . $filess->getClientOriginalExtension();
                 $filess->move('images/avatar/', $namess);
-                $paths = '/images/avatar/' . $namess;
-                $avatar = $paths;
+                $paths = "/images/avatar/" . $namess;
+            } else{
+                $paths = "https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg";
             }
             User::create([
                 'name' => $request->name,
@@ -65,7 +65,7 @@ class AdminController extends Controller
                 'gender' => $request->gender,
                 'type' => $request->type,
                 'image_citizen_id' => json_encode($image_citizen),
-                'avatar' => json_encode($avatar),
+                'avatar' => $paths,
             ]);
             return redirect()->back()->with('success', 'Your account has been created successfully!');
         }
