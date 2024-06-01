@@ -20,41 +20,44 @@
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom04">Email</label>
-                                <input type="email" class="form-control" id="validationCustom04" name="email"
-                                    value="{{ old('email') }}" required
-                                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                                <input type="email" class="form-control"
+                                    value="{{ $user->email }}" disabled>
                             </div>
                             <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom05">Số Điện Thoại</label>
-                                <input type="text" class="form-control" id="validationCustom05" name="phone"
-                                    value="{{ old('phone') }}" required maxlength="10" pattern="^[0-9]*$">
+                                <input type="text" class="form-control"
+                                    value="{{ $user->phone }}" disabled>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
+                                @php
+                                    if ($user->type == 0) {
+                                        $value = 'User';
+                                    } elseif ( $user->type == 1 ) {
+                                        $value = 'Admin';
+                                    } else {
+                                        $value = 'Super Admin';
+                                    }
+                                @endphp
                                 <label for="validationCustom03">Loại Tài Khoản</label>
-                                <select class="form-control" name="type" required>
-                                    <option value="0">User</option>
-                                    <option value="1">Admin</option>
-                                    <option value="2">Super Admin</option>
-                                </select>
+                                <input type="text" class="form-control"
+                                    value="{{ $value }}" disabled>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom04">Ngày Sinh</label>
-                                <input type="date" class="form-control" id="validationCustom04" name="dob"
-                                    value="{{ old('dob') }}" required>
+                                <input type="date" class="form-control"
+                                    value="{{ $user->dob }}" disabled>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom05">Giới Tính</label>
-                                <select class="form-control" name="gender" required>
-                                    <option value="nam">Nam</option>
-                                    <option value="nu">Nữ</option>
-                                </select>
+                                <input type="text" class="form-control"
+                                value="{{ $user->gender }}" disabled>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom05">CCCD</label>
-                                <input type="text" class="form-control" id="validationCustom05" name="citizen_id"
-                                    value="{{ old('citizen_id') }}" required maxlength="12" pattern="^[0-9]*$">
+                                <input type="text" class="form-control"
+                                    value="{{ $user->citizen_id }}" disabled>
                             </div>
                         </div>
                         <div class="form-row">
@@ -85,13 +88,14 @@
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom05">Địa Chỉ</label>
-                                <input type="text" class="form-control" id="validationCustom05" placeholder=""
-                                    name="address" value="{{ old('address') }}" required>
+                                <input type="text" class="form-control"
+                                    name="address" value="{{ $user->address }}" disabled>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                 <label for="validationCustom05">Password</label>
-                                <input type="password" class="form-control" id="validationCustom05" placeholder=""
-                                    name="password" required minlength="8" value="{{ old('password') }}">
+                                <input type="password" class="form-control" id="password-field"
+                                 value="{{ $user->password}}" disabled >
+                                 <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                         </div>
 
@@ -104,3 +108,26 @@
     </div>
     @endforeach
 </div>
+
+<style>
+    .field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
+}
+</style>
+
+<script>
+    $(".toggle-password").click(function() {
+
+$(this).toggleClass("fa-eye fa-eye-slash");
+var input = $($(this).attr("toggle"));
+if (input.attr("type") == "password") {
+  input.attr("type", "text");
+} else {
+  input.attr("type", "password");
+}
+});
+</script>

@@ -9,9 +9,10 @@ use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller
 {
-    public function index()
+    public function index(User $user)
     {
-        return view("admin.index");
+        $data_user = User::orderBy('id', 'DESC')->get();
+        return view("admin.index", compact('data_user'));
     }
 
     public function account(User $user)
