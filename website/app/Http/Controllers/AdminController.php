@@ -17,6 +17,7 @@ class AdminController extends Controller
     public function account(User $user)
     {
         $data_user = User::orderBy('id', 'DESC')->get();
+
         return view("admin.account.index", compact('data_user'));
     }
 
@@ -36,16 +37,14 @@ class AdminController extends Controller
             $msg = 'Email đã được đăng ký, vui lòng nhập lại !';
             return redirect()->route('account')->with('userExistError', $msg);
         } else {
-            $image_citizen = array();
+            $image_citizen = [];
             if ($files = $request->file('image_citizen_id')) {
                 $count = 1;
                 foreach ($files as $file) {
                     $names = $request->name . '-' . $count++ . '.' . $file->getClientOriginalExtension();
                     $file->move('images/citizen_images/', $names);
-                    $path = '/images/citizen_id/' . $names;
-                    $image_citizen[] = $path;
+                    $image_citizen[] = $names;
                 }
-                // dd($image_citizen);
             }
             if ($filess = $request->file('avatar')) {
                 $namess = $request->name . 'avatar' . '.' . $filess->getClientOriginalExtension();
@@ -64,7 +63,7 @@ class AdminController extends Controller
                 'address' => $request->address,
                 'gender' => $request->gender,
                 'type' => $request->type,
-                'image_citizen_id' => json_encode($image_citizen),
+                'image_citizen_id' => $image_citizen,
                 'avatar' => $paths,
             ]);
             return redirect()->back()->with('success', 'Your account has been created successfully!');

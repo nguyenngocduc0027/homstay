@@ -38,7 +38,8 @@
                                                 <tr>
                                                     <td>{{ $count++ }}</td>
                                                     <td>
-                                                        <img src="{{$user->avatar}}" alt="Responsive image" width="100px" height="100px" style="object-fit: fill">
+                                                        <img src="{{ $user->avatar }}" alt="Responsive image" width="100px"
+                                                            height="100px" style="object-fit: fill">
 
                                                     </td>
                                                     <td>{{ $user->name }}</td>
@@ -57,23 +58,15 @@
                                                     <td>{{ $user->phone }}</td>
                                                     <td>{{ $user->citizen_id }}</td>
                                                     <td>
-                                                        {{-- <a href="#" class="btn btn-primary" data-toggle="modal"
-                                                            data-target="#viewacc">
-                                                            <i class="fa fa-eye"></i>
-                                                        </a>
-                                                        <a href="#" class="btn btn-primary">
-                                                            <i class="fa fa-edit"></i>
-                                                        </a> --}}
-
+                                                        <button type="submit"
+                                                            style="background-color: transparent; border: 0px"
+                                                            data-toggle="modal" data-target="#viewacc-{{ $user->id }}">
+                                                            <i class="fa fa-eye" style="color: blue"></i>
+                                                        </button>
                                                         <form action="" method="">
                                                             @csrf
-                                                            <button type="submit" style="background-color: transparent; border: 0px">
-                                                                <i class="fa fa-eye" style="color: blue"></i>
-                                                            </button>
-                                                        </form>
-                                                        <form action="" method="">
-                                                            @csrf
-                                                            <button type="submit" style="background-color: transparent;border: 0px">
+                                                            <button type="submit"
+                                                                style="background-color: transparent;border: 0px">
                                                                 <i class="fa fa-pencil-alt" style="color: orange"></i>
                                                             </button>
                                                         </form>
@@ -81,7 +74,8 @@
                                                             method="post">
                                                             @csrf
                                                             @method('DELETE')
-                                                            <button type="submit" style="background-color: transparent;border: 0px">
+                                                            <button type="submit"
+                                                                style="background-color: transparent;border: 0px">
                                                                 <i class="fa fa-trash" style="color: red"></i>
                                                             </button>
 
