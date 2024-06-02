@@ -4,14 +4,11 @@
         <div class="container-fluid dashboard-content ">
             <div class="ecommerce-widget">
                 <div class="row">
-
-
-
                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
                             <a style="margin-bottom: 20px" href="#" class="btn btn-primary" data-toggle="modal"
                                 data-target="#addaccount">
-                                + Thêm người dùng
+                                <i class="fas fw fa-plus"></i> Thêm mới
                             </a>
                         </div>
                         <div class="card">
@@ -39,8 +36,7 @@
                                                     <td>{{ $count++ }}</td>
                                                     <td>
                                                         <img src="{{ $user->avatar }}" alt="Responsive image" width="100px"
-                                                            height="100px" style="object-fit: fill">
-
+                                                            height="100px" style="object-fit: cover">
                                                     </td>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>
@@ -58,43 +54,27 @@
                                                     <td>{{ $user->phone }}</td>
                                                     <td>{{ $user->citizen_id }}</td>
                                                     <td>
-                                                        <button type="submit"
-                                                            style="background-color: transparent; border: 0px"
-                                                            data-toggle="modal" data-target="#viewacc-{{ $user->id }}">
-                                                            <i class="fa fa-eye" style="color: blue"></i>
+                                                        <button type="submit" class="btn btn-primary" data-toggle="modal"
+                                                            data-target="#viewacc-{{ $user->id }}">
+                                                            <i class="fas fw fa-eye"></i>
                                                         </button>
-                                                        <form action="" method="">
-                                                            @csrf
-                                                            <button type="submit"
-                                                                style="background-color: transparent;border: 0px">
-                                                                <i class="fa fa-pencil-alt" style="color: orange"></i>
-                                                            </button>
-                                                        </form>
-                                                        <form action="{{ route('delete_account', $user->id) }}"
-                                                            method="post">
-                                                            @csrf
-                                                            @method('DELETE')
-                                                            <button type="submit"
-                                                                style="background-color: transparent;border: 0px">
-                                                                <i class="fa fa-trash" style="color: red"></i>
-                                                            </button>
-
-                                                        </form>
+                                                        <button type="submit" class="btn btn-secondary" data-toggle="modal"
+                                                            data-target="#editacc-{{ $user->id }}">
+                                                            <i class="fas fw fa-pencil-alt"></i>
+                                                        </button>
+                                                        <button type="submit" class="btn btn-danger" data-toggle="modal"
+                                                            data-target="#deleteacc-{{ $user->id }}">
+                                                            <i class="fas fw fa-trash-alt"></i>
+                                                        </button>
                                                     </td>
                                                 </tr>
                                             @endforeach
-
                                         </tbody>
-
                                     </table>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
             </div>
         </div>

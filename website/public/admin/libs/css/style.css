@@ -4515,6 +4515,7 @@ Pills vertical
 .table th {
     color: #3d405c;
     font-family: 'Roboto';
+    font-weight: 900;
 }
 
 .table-bordered {

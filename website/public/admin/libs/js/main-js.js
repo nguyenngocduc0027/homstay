@@ -166,3 +166,5 @@ $("#preview-container").on("click", ".delete", function(){
         $("#file-input").val(""); // Clear input value if needed
     });
 });
+
+

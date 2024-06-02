@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="/admin/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="/admin/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="/admin/vendor/fonts/flag-icon-css/flag-icon.min.css">
+
+    <link href="/admin/vendor/fonts/circular-std/style.css" rel="stylesheet">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -35,8 +39,6 @@
         }
     </style>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 </head>
 
 <body>
@@ -86,6 +88,8 @@
     </div>
     @include('admin.modal.addacc')
     @include('admin.modal.viewacc')
+    @include('admin.modal.editacc')
+    @include('admin.modal.deleteacc')
     <!-- ============================================================== -->
     <!-- end main wrapper  -->
     <!-- ============================================================== -->
