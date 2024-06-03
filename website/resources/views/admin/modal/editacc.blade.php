@@ -12,8 +12,9 @@
                         </a>
                     </div>
                     <div class="modal-body">
-                        <form method="POST" action="{{ route('add_account') }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('update_account', $user->id) }}" enctype="multipart/form-data">
                             @csrf
+
                             <div class="form-row">
                                 <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 mb-2">
                                     <label for="validationCustom03">Họ Tên</label>
@@ -104,13 +105,13 @@
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                     <label for="validationCustom05">Địa Chỉ</label>
                                     <input type="text" class="form-control" id="validationCustom05"
-                                        placeholder="" name="address" value="{{ old('address') }}" required>
+                                        placeholder="" name="address" value="{{ $user->address }}" required>
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                     <label for="validationCustom05">Password</label>
-                                    <input type="password" class="form-control" id="validationCustom05"
+                                    <input type="text" class="form-control" id="validationCustom05"
                                         placeholder="" name="password" required minlength="8"
-                                        value="{{ old('password') }}">
+                                        value="{{ $user->password }}">
                                 </div>
                             </div>
 

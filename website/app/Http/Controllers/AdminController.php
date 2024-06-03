@@ -70,4 +70,51 @@ class AdminController extends Controller
             return redirect()->back()->with('success', 'Your account has been created successfully!');
         }
     }
+
+    public function update_account(Request $request, $id)
+    {
+            $new_user = User::where('id', $id);
+
+            $image_citizen = [];
+            if ($files = $request->file('image_citizen_id')) {
+                $count = 1;
+                foreach ($files as $file) {
+                    $names = $request->name . '-' . $count++ . '.' . $file->getClientOriginalExtension();
+                    $file->move('images/citizen_images/', $names);
+                    $image_citizen[] = $names;
+                }
+            }
+            if ($filess = $request->file('avatar')) {
+                $namess = $request->name . 'avatar' . '.' . $filess->getClientOriginalExtension();
+                $filess->move('images/avatar/', $namess);
+                $paths = "/images/avatar/" . $namess;
+            } else{
+                $paths = "https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg";
+            }
+            // User::create([
+            //     'name' => $request->name,
+            //     'email' => $request->email,
+            //     'password' => Hash::make($request->password),
+            //     'phone' => $request->phone,
+            //     'citizen_id' => $request->citizen_id,
+            //     'dob' => $request->dob,
+            //     'address' => $request->address,
+            //     'gender' => $request->gender,
+            //     'type' => $request->type,
+            //     'image_citizen_id' => $image_citizen,
+            //     'avatar' => $paths,
+            // ]);
+            $saveData = [
+                "name" => $request->name,
+                'phone' => $request->phone,
+                'citizen_id' => $request->citizen_id,
+                'dob' => $request->dob,
+                'address' => $request->address,
+                'gender' => $request->gender,
+                'type' => $request->type,
+            ];
+           User::updateOrCreate(['id' => $id], $saveData);
+            return redirect()->back()->with('success', 'Your account has been update successfully!');
+        }
+
 }

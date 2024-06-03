@@ -36,4 +36,5 @@ Route::get('/reset-password', [UserController::class, 'reset_password'])->name('
 Route::get('/account', [AdminController::class,'account'])->name('account');
 Route::post('/do-account', [AdminController::class, 'add_account'])->name('add_account');
 Route::delete('/delete-account/{id}', [AdminController::class, 'delete_account'])->name('delete_account');
+Route::post('/update/{id}}', [AdminController::class, 'update_account'])->name('update_account');
 
