@@ -36,18 +36,9 @@
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                     <label for="validationCustom03">Loại Tài Khoản</label>
                                     <select class="form-control" name="type" def required>
-                                        <option selected>
-                                            @if ($user->type == '0')
-                                                User
-                                            @elseif($user->type == '1')
-                                                Admin
-                                            @else
-                                                Super Admin
-                                            @endif
-                                        </option>
-                                        <option value="0">User</option>
-                                        <option value="1">Admin</option>
-                                        <option value="2">Super Admin</option>
+                                        <option @if ($user->type == '0') selected @endif value="0">User</option>
+                                        <option @if ($user->type == '1') selected @endif value="1">Admin</option>
+                                        <option @if ($user->type == '2') selected @endif value="2">Super Admin</option>
                                     </select>
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
@@ -58,9 +49,9 @@
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                     <label for="validationCustom05">Giới Tính</label>
                                     <select class="form-control" name="gender" required>
-                                        <option selected>{{ $user->gender == 'nam' ? 'Nam' : 'Nữ' }}</option>
-                                        <option value="nam">Nam</option>
-                                        <option value="nu">Nữ</option>
+
+                                        <option {{ $user->gender == 'nam' ? 'selected' : '' }} value="nam">Nam</option>
+                                        <option {{ $user->gender == 'nu' ? 'selected' : '' }} value="nu">Nữ</option>
                                     </select>
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
@@ -142,7 +133,9 @@
 
     $(document).ready(function() {
         $("#file-input1").on("change", function() {
+
             var files = $(this)[0].files;
+
             $("#preview-container1").empty();
             if (files.length > 0) {
                 for (var i = 0; i < files.length; i++) {

@@ -73,8 +73,7 @@ class AdminController extends Controller
 
     public function update_account(Request $request, $id)
     {
-            $new_user = User::where('id', $id);
-
+            $new_user = User::where('id', $id)->get();
             $image_citizen = [];
             if ($files = $request->file('image_citizen_id')) {
                 $count = 1;
@@ -84,12 +83,16 @@ class AdminController extends Controller
                     $image_citizen[] = $names;
                 }
             }
+
             if ($filess = $request->file('avatar')) {
                 $namess = $request->name . 'avatar' . '.' . $filess->getClientOriginalExtension();
                 $filess->move('images/avatar/', $namess);
                 $paths = "/images/avatar/" . $namess;
             } else{
-                $paths = "https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg";
+                foreach ($new_user as $key) {
+                    $img_ava = $key->avatar;
+                }
+                $paths = $img_ava;
             }
             // User::create([
             //     'name' => $request->name,
@@ -112,6 +115,7 @@ class AdminController extends Controller
                 'address' => $request->address,
                 'gender' => $request->gender,
                 'type' => $request->type,
+                'avatar' => $paths,
             ];
            User::updateOrCreate(['id' => $id], $saveData);
             return redirect()->back()->with('success', 'Your account has been update successfully!');
