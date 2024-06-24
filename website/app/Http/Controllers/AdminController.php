@@ -72,8 +72,9 @@ class AdminController extends Controller
     }
 
     public function update_account(Request $request, $id)
+
     {
-            $new_user = User::where('id', $id)->get();
+            $new_user = User::find($id);
             $image_citizen = [];
             if ($files = $request->file('image_citizen_id')) {
                 $count = 1;
@@ -82,6 +83,10 @@ class AdminController extends Controller
                     $file->move('images/citizen_images/', $names);
                     $image_citizen[] = $names;
                 }
+            } else{
+
+                    $image_citizen = $new_user->image_citizen_id;
+
             }
 
             if ($filess = $request->file('avatar')) {
@@ -89,24 +94,14 @@ class AdminController extends Controller
                 $filess->move('images/avatar/', $namess);
                 $paths = "/images/avatar/" . $namess;
             } else{
-                foreach ($new_user as $key) {
-                    $img_ava = $key->avatar;
-                }
-                $paths = $img_ava;
+                $paths = $new_user->avatar;
             }
-            // User::create([
-            //     'name' => $request->name,
-            //     'email' => $request->email,
-            //     'password' => Hash::make($request->password),
-            //     'phone' => $request->phone,
-            //     'citizen_id' => $request->citizen_id,
-            //     'dob' => $request->dob,
-            //     'address' => $request->address,
-            //     'gender' => $request->gender,
-            //     'type' => $request->type,
-            //     'image_citizen_id' => $image_citizen,
-            //     'avatar' => $paths,
-            // ]);
+            if ($request->password == $new_user->password) {
+                $new_pass = $new_user->password;
+            } else {
+                $new_pass = Hash::make($request->password);
+            }
+
             $saveData = [
                 "name" => $request->name,
                 'phone' => $request->phone,
@@ -116,9 +111,12 @@ class AdminController extends Controller
                 'gender' => $request->gender,
                 'type' => $request->type,
                 'avatar' => $paths,
+                'image_citizen_id' => $image_citizen,
+                'password' => $new_pass,
             ];
            User::updateOrCreate(['id' => $id], $saveData);
             return redirect()->back()->with('success', 'Your account has been update successfully!');
         }
 
 }
+

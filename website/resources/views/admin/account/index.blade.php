@@ -49,7 +49,8 @@
                                                             Super Admin
                                                         @endif
                                                     </td>
-                                                    <td>{{ $user->gender }}</td>
+                                                    <td>{{ $user->gender == 'nam' ? "Nam" : "Nữ" }}
+                                                    </td>
                                                     <td>{{ $user->dob }}</td>
                                                     <td>{{ $user->phone }}</td>
                                                     <td>{{ $user->citizen_id }}</td>

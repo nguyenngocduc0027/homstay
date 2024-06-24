@@ -12,7 +12,8 @@
                         </a>
                     </div>
                     <div class="modal-body">
-                        <form method="POST" action="{{ route('update_account', $user->id) }}" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('update_account', $user->id) }}"
+                            enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-row">
@@ -36,9 +37,12 @@
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                     <label for="validationCustom03">Loại Tài Khoản</label>
                                     <select class="form-control" name="type" def required>
-                                        <option @if ($user->type == '0') selected @endif value="0">User</option>
-                                        <option @if ($user->type == '1') selected @endif value="1">Admin</option>
-                                        <option @if ($user->type == '2') selected @endif value="2">Super Admin</option>
+                                        <option @if ($user->type == '0') selected @endif value="0">User
+                                        </option>
+                                        <option @if ($user->type == '1') selected @endif value="1">Admin
+                                        </option>
+                                        <option @if ($user->type == '2') selected @endif value="2">Super
+                                            Admin</option>
                                     </select>
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
@@ -50,7 +54,8 @@
                                     <label for="validationCustom05">Giới Tính</label>
                                     <select class="form-control" name="gender" required>
 
-                                        <option {{ $user->gender == 'nam' ? 'selected' : '' }} value="nam">Nam</option>
+                                        <option {{ $user->gender == 'nam' ? 'selected' : '' }} value="nam">Nam
+                                        </option>
                                         <option {{ $user->gender == 'nu' ? 'selected' : '' }} value="nu">Nữ</option>
                                     </select>
                                 </div>
@@ -86,9 +91,9 @@
                                     <div id="preview-container1">
                                         @if (is_array($user->image_citizen_id) || is_object($user->image_citizen_id))
                                             @foreach ($user->image_citizen_id as $img)
-                                                <div class='preview'><img
-                                                        src='/images/citizen_images/{{ $img }}'><button
-                                                        class='delete'>Delete</button></div>
+                                                <div class='preview'>
+                                                    <img src='/images/citizen_images/{{ $img }}'>
+                                                </div>
                                             @endforeach
                                         @endif
                                     </div>
@@ -100,7 +105,7 @@
                                 </div>
                                 <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mb-2">
                                     <label for="validationCustom05">Password</label>
-                                    <input type="text" class="form-control" id="validationCustom05"
+                                    <input type="password" class="form-control" id="validationCustom05"
                                         placeholder="" name="password" required minlength="8"
                                         value="{{ $user->password }}">
                                 </div>
