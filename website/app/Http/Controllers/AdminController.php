@@ -36,7 +36,7 @@ class AdminController extends Controller
 
         if (sizeof($users_mail) > 0) {
             $msg = 'Email đã được đăng ký, vui lòng nhập lại !';
-            return redirect()->route('account')->with('userExistError', $msg);
+            return redirect()->back()->with('userExistError', $msg);
         } else {
             $image_citizen = [];
             if ($files = $request->file('image_citizen_id')) {
