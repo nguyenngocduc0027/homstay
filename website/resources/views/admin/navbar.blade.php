@@ -13,6 +13,9 @@
                     <li class="nav-item">
                         <a href="{{route('account')}}" class="nav-link"><i class="fa fa-fw fa-user-circle"></i>Account</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{route('account')}}" class="nav-link"><i class="fa fa-fw fa-user-circle"></i>Apartment</a>
+                    </li>
                 </ul>
             </div>
         </nav>

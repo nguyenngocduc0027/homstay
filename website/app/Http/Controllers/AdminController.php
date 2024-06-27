@@ -118,5 +118,13 @@ class AdminController extends Controller
             return redirect()->back()->with('success', 'Your account has been update successfully!');
         }
 
+
+        public function apartment(User $user)
+        {
+            $data_user = User::orderBy('id', 'DESC')->get();
+
+            return view("admin.account.index", compact('data_user'));
+        }
+
 }
 
