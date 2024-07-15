@@ -7,6 +7,10 @@
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
+                <div class="pt-2 pb-2 d-flex justify-content-end">
+                    <a href="{{route('create_houses')}}" type="button" class="btn btn-primary"><i class="bi bi-plus me-1"></i> Add New</a>
+                </div>
+
                 <div class="card">
                     <div class="card-body">
                       <!-- Table with stripped rows -->

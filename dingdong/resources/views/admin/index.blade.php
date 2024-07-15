@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="/admin/img/logo.png" rel="icon">
+  <link href="/admin/img/60x60.png" rel="icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -27,7 +27,6 @@
 
   <!-- Template Main CSS File -->
   <link href="/admin/css/style.css" rel="stylesheet">
-
 
 </head>
 

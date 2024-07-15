@@ -13,4 +13,8 @@ class AdminController extends Controller
     public function houses(){
         return view('admin.home.houses.show');
     }
+
+    public function create_houses(){
+        return view('admin.home.houses.create');
+    }
 }

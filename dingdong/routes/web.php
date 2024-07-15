@@ -24,3 +24,4 @@ Route::get('/dang-ky', [AuthController::class,'register'])->name('register');
 Route::get('/quen-mat-khau', [AuthController::class,'forgot'])->name('forgot');
 Route::get('/admin-dashboard',[AdminController::class, 'dashboard'])->name('admin_dashboard');
 Route::get('/nha-tro', [AdminController::class, 'houses'])->name('admin_houses');
+Route::get('/create-houses', [AdminController::class, 'create_houses'])->name('create_houses');

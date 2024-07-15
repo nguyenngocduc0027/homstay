@@ -40,7 +40,6 @@
                                             id="yourPassword" required>
                                         <div class="invalid-feedback">Please enter your password!</div>
                                     </div>
-
                                 </div>
                                 <div class="col-12">
                                     <a class="small mb-0" href="{{route('forgot')}}">Quên mật khẩu ?</a>
@@ -53,7 +52,6 @@
                                             href="{{route('register')}}">Create an account</a></p>
                                 </div>
                             </form>
-
                         </div>
                     </div>
                     <div class="credits">
@@ -63,8 +61,6 @@
                 </div>
             </div>
         </div>
-
     </section>
-
 </div>
 @endsection
