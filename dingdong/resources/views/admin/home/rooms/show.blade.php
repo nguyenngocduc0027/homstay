@@ -1,14 +1,14 @@
 @extends('admin.index')
 @section('contentadmindashboard')
     <div class="pagetitle">
-        <h1>Houses</h1>
+        <h1>Rooms</h1>
     </div><!-- End Page Title -->
 
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
                 <div class="pt-2 pb-2 d-flex justify-content-end">
-                    <a href="{{route('create_houses')}}" type="button" class="btn btn-primary"><i class="bi bi-plus me-1"></i> Add New</a>
+                    <a href="{{route('create_rooms')}}" type="button" class="btn btn-primary"><i class="bi bi-plus me-1"></i> Add New</a>
                 </div>
 
                 <div class="card">
@@ -19,22 +19,24 @@
                           <tr>
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Acreage</th>
+                            <th scope="col">Houses</th>
                             <th scope="col">Price</th>
-                            <th scope="col">Address</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Users</th>
                             <th scope="col">Action</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
                             <th scope="row">1</th>
-                            <td>DingDong 1</td>
-                            <td>52m2</td>
-                            <td>24000000</td>
-                            <td>22/127/40/16 Khuyen Luong, Tran Phu, Hoang Mai</td>
+                            <td>101</td>
+                            <td>DingDong</td>
+                            <td>3500000</td>
+                            <td>Active</td>
+                            <td>Nguyen Ngoc Duc</td>
                             <td>
-                                <a href="{{route('detail_houses')}}" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>
-                                <a href="{{route('update_houses')}}" type="button" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
+                                <a href="{{route('detail_rooms')}}" type="button" class="btn btn-success"><i class="bi bi-eye"></i></a>
+                                <a href="{{route('update_rooms')}}" type="button" class="btn btn-primary"><i class="bi bi-pencil"></i></a>
                                 <a href="" type="button" class="btn btn-danger"><i class="bi bi-trash"></i></a>
                             </td>
                           </tr>

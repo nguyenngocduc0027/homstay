@@ -16,7 +16,7 @@
               </a>
               <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                   <li><a href="{{route('admin_houses')}}"><i class="bi bi-circle"></i><span>Houses</span></a></li>
-                  <li><a href=""><i class="bi bi-circle"></i><span>Rooms</span></a></li>
+                  <li><a href="{{route('admin_rooms')}}"><i class="bi bi-circle"></i><span>Rooms</span></a></li>
               </ul>
           </li><!-- End Components Nav -->
 
