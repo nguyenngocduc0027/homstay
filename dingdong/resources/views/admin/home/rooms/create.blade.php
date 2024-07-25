@@ -1,7 +1,7 @@
 @extends('admin.index')
 @section('contentadmindashboard')
     <div class="pagetitle">
-        <h1>Create Houses</h1>
+        <h1>Thêm Mới Phòng Trọ</h1>
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -11,72 +11,79 @@
                     <div class="card-body">
                         <!-- Custom Styled Validation -->
                         <form class="row g-3 needs-validation" novalidate="">
-                            <h5 class="card-title">Create new houses</h5>
-                            <div class="col-md-4">
-                                <label for="validationCustom01" class="form-label">Name</label>
+                            <h5 class="card-title">Thông tin chung</h5>
+                            <div class="col-md-2">
+                                <label for="validationCustom01" class="form-label">Tên phòng trọ</label>
                                 <input type="text" class="form-control" id="validationCustom01" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a name of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom02" class="form-label">Acreage</label>
-                                <input type="number" class="form-control" id="validationCustom02" required="">
+                                <label for="validationCustom02" class="form-label">Nhà trọ</label>
+                                <select class="form-select" aria-label="Default select example" id="validationCustom02">
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                  </select>
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a acreage of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom03" class="form-label">Price</label>
+                                <label for="validationCustom03" class="form-label">Giá thuê</label>
                                 <input type="number" class="form-control" id="validationCustom03" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a price of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="validationCustom04" required="">
+                            <div class="col-md-2">
+                                <label for="validationCustom04" class="form-label">Trạng thái</label>
+                                <select class="form-select" aria-label="Default select example" id="validationCustom04">
+                                    <option value="1" class="text-success">Đã thuê</option>
+                                    <option value="2" class="text-danger">Trống</option>
+                                  </select>
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a address of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <label for="validationCustom05" class="form-label">Start Date</label>
                                 <input type="date" class="form-control" id="validationCustom05" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please pick start date!
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <label for="validationCustom06" class="form-label">End Date</label>
                                 <input type="date" class="form-control" id="validationCustom06" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please pick end date!
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-1">
                                 <label for="validationCustom07" class="form-label">Floors</label>
                                 <input type="number" class="form-control" id="validationCustom07" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
                                     Enter floors.
@@ -86,7 +93,7 @@
                                 <label for="validationCustom08" class="form-label">Rooms</label>
                                 <input type="number" class="form-control" id="validationCustom08" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
                                     Enter rooms.
@@ -96,7 +103,7 @@
                                 <label for="validationCustom09" class="form-label">Number Bill Electric</label>
                                 <input type="text" class="form-control" id="validationCustom09" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
                                     Enter number bill electric.
@@ -106,7 +113,7 @@
                                 <label for="validationCustom10" class="form-label">Number Bill Water</label>
                                 <input type="text" class="form-control" id="validationCustom10" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
                                     Enter number bill water.

@@ -33,7 +33,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -317,3 +317,6 @@
   }
 
 })();
+
+
+let table = new DataTable('#data-tables');

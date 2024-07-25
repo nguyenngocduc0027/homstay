@@ -4,19 +4,21 @@
       <ul class="sidebar-nav" id="sidebar-nav">
 
           <li class="nav-item">
-              <a class="nav-link " href="{{ route('admin_dashboard') }}">
+              <a class="nav-link collapsed" href="{{ route('admin_dashboard') }}">
                   <i class="bi bi-grid"></i>
-                  <span>Dashboard</span>
+                  <span>Thống Kê</span>
               </a>
           </li><!-- End Dashboard Nav -->
 
+          <li class="nav-heading">Danh Mục</li>
+
           <li class="nav-item">
               <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                  <i class="bi bi-menu-button-wide"></i><span>Home</span><i class="bi bi-chevron-down ms-auto"></i>
+                  <i class="bi bi-menu-button-wide"></i><span>Quản Lý Nhà Trọ</span><i class="bi bi-chevron-down ms-auto"></i>
               </a>
               <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                  <li><a href="{{route('admin_houses')}}"><i class="bi bi-circle"></i><span>Houses</span></a></li>
-                  <li><a href="{{route('admin_rooms')}}"><i class="bi bi-circle"></i><span>Rooms</span></a></li>
+                  <li><a href="{{route('admin_houses')}}"><i class="bi bi-circle"></i><span>Nhà Trọ</span></a></li>
+                  <li><a href="{{route('admin_rooms')}}"><i class="bi bi-circle"></i><span>Phòng Trọ</span></a></li>
               </ul>
           </li><!-- End Components Nav -->
 
@@ -112,7 +114,7 @@
         </ul>
       </li><!-- End Icons Nav --> --}}
 
-          <li class="nav-heading">Pages</li>
+          <li class="nav-heading">Thiết Lập</li>
 
           {{-- <li class="nav-item">
         <a class="nav-link collapsed" href="users-profile.html">

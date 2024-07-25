@@ -1,7 +1,7 @@
 @extends('admin.index')
 @section('contentadmindashboard')
     <div class="pagetitle">
-        <h1>Create Houses</h1>
+        <h1>Thêm ới nhà trọ</h1>
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -11,147 +11,147 @@
                     <div class="card-body">
                         <!-- Custom Styled Validation -->
                         <form class="row g-3 needs-validation" novalidate="">
-                            <h5 class="card-title">Create new houses</h5>
+                            <h5 class="card-title">Thông tin chung</h5>
                             <div class="col-md-4">
-                                <label for="validationCustom01" class="form-label">Name</label>
+                                <label for="validationCustom01" class="form-label">Tên nhà trọ</label>
                                 <input type="text" class="form-control" id="validationCustom01" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a name of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom02" class="form-label">Acreage</label>
+                                <label for="validationCustom02" class="form-label">Diện tích</label>
                                 <input type="number" class="form-control" id="validationCustom02" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a acreage of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom03" class="form-label">Price</label>
+                                <label for="validationCustom03" class="form-label">Giá thuê</label>
                                 <input type="number" class="form-control" id="validationCustom03" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a price of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label">Address</label>
+                                <label for="validationCustom04" class="form-label">Địa chỉ</label>
                                 <input type="text" class="form-control" id="validationCustom04" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter a address of houses.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom05" class="form-label">Start Date</label>
+                                <label for="validationCustom05" class="form-label">Ngày bắt đầu</label>
                                 <input type="date" class="form-control" id="validationCustom05" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please pick start date!
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom06" class="form-label">End Date</label>
+                                <label for="validationCustom06" class="form-label">Ngày kết thúc</label>
                                 <input type="date" class="form-control" id="validationCustom06" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please pick end date!
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-1">
-                                <label for="validationCustom07" class="form-label">Floors</label>
+                                <label for="validationCustom07" class="form-label">Số tầng</label>
                                 <input type="number" class="form-control" id="validationCustom07" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Enter floors.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-1">
-                                <label for="validationCustom08" class="form-label">Rooms</label>
+                                <label for="validationCustom08" class="form-label">Số phòng</label>
                                 <input type="number" class="form-control" id="validationCustom08" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Enter rooms.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom09" class="form-label">Number Bill Electric</label>
+                                <label for="validationCustom09" class="form-label">Mã hóa đơn điện</label>
                                 <input type="text" class="form-control" id="validationCustom09" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Enter number bill electric.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom10" class="form-label">Number Bill Water</label>
+                                <label for="validationCustom10" class="form-label">Mã hóa đơn nước</label>
                                 <input type="text" class="form-control" id="validationCustom10" required="">
                                 <div class="valid-feedback">
-                                    Looks good!
+
                                 </div>
                                 <div class="invalid-feedback">
-                                    Enter number bill water.
+                                    Nhập dữ liệu!
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label for="formFile" class="form-label">File Contract</label>
+                                <label for="formFile" class="form-label">File hợp đồng</label>
                                 <input class="form-control" type="file" id="formFile">
                             </div>
-                            <h5 class="card-title">Checking Equipment </h5>
+                            <h5 class="card-title">Kiểm tra thiết bị </h5>
                             <div class="col-md-1">
-                                <label for="validationCustom11" class="form-label">Bed</label>
+                                <label for="validationCustom11" class="form-label">Giường</label>
                                 <input type="number" class="form-control" id="validationCustom11">
                             </div>
                             <div class="col-md-1">
-                                <label for="validationCustom12" class="form-label">Wardrobe</label>
+                                <label for="validationCustom12" class="form-label">Tủ quần áo</label>
                                 <input type="number" class="form-control" id="validationCustom12">
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom13" class="form-label">Heater</label>
+                                <label for="validationCustom13" class="form-label">Nóng lạnh</label>
                                 <input type="number" class="form-control" id="validationCustom13">
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom15" class="form-label">Fridge</label>
+                                <label for="validationCustom15" class="form-label">Tủ lạnh</label>
                                 <input type="number" class="form-control" id="validationCustom15">
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom16" class="form-label">Induction Cooker</label>
+                                <label for="validationCustom16" class="form-label">Bếp từ</label>
                                 <input type="number" class="form-control" id="validationCustom16">
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom17" class="form-label">Washing Machine</label>
+                                <label for="validationCustom17" class="form-label">Máy giặt</label>
                                 <input type="number" class="form-control" id="validationCustom17">
                             </div>
                             <div class="col-md-2">
-                                <label for="validationCustom14" class="form-label">Air Condiition</label>
+                                <label for="validationCustom14" class="form-label">Điều hòa</label>
                                 <input type="number" class="form-control" id="validationCustom14">
                             </div>
                             <div class="col-md-12">
-                                <label for="validationCustom18" class="form-label">Note</label>
+                                <label for="validationCustom18" class="form-label">Ghi chú</label>
                                 <!-- TinyMCE Editor -->
                                 <textarea class="tinymce-editor"></textarea><!-- End TinyMCE Editor -->
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary" type="submit">Add New Houses</button>
+                                <button class="btn btn-primary" type="submit">Thêm Mới</button>
                             </div>
                         </form>
                         <!-- End Custom Styled Validation -->
