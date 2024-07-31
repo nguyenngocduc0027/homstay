@@ -1,7 +1,19 @@
 @extends('admin.index')
 @section('contentadmindashboard')
+    <style>
+        .preview {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .preview img {
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+        }
+    </style>
     <div class="pagetitle">
-        <h1>Thêm ới nhà trọ</h1>
+        <h1>Thêm mới nhà trọ</h1>
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -147,6 +159,11 @@
                                 <input type="number" class="form-control" id="validationCustom14">
                             </div>
                             <div class="col-md-12">
+                                <label for="validationCustom19" class="form-label">Ảnh nhà trọ</label>
+                                <input type="file" class="form-control" id="file-input" multiple>
+                                <div id="preview-container"></div>
+                            </div>
+                            <div class="col-md-12">
                                 <label for="validationCustom18" class="form-label">Ghi chú</label>
                                 <!-- TinyMCE Editor -->
                                 <textarea class="tinymce-editor"></textarea><!-- End TinyMCE Editor -->
@@ -161,4 +178,27 @@
             </div>
         </div>
     </section>
+    <script>
+        $(document).ready(function() {
+            $("#file-input").on("change", function() {
+                var files = $(this)[0].files;
+                $("#preview-container").empty();
+                if (files.length > 0) {
+                    for (var i = 0; i < files.length; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $("<div class='preview'><img src='" + e.target.result +
+                                "'><button class='delete'>Delete</button></div>").appendTo(
+                                "#preview-container");
+                        };
+                        reader.readAsDataURL(files[i]);
+                    }
+                }
+            });
+            $("#preview-container").on("click", ".delete", function() {
+                $(this).parent(".preview").remove();
+                $("#file-input").val(""); // Clear input value if needed
+            });
+        });
+    </script>
 @endsection
