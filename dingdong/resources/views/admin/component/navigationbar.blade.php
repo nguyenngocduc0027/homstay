@@ -8,163 +8,95 @@
                   <i class="bi bi-grid"></i>
                   <span>Thống Kê</span>
               </a>
-          </li><!-- End Dashboard Nav -->
-
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="">
+                <i class="bi bi-chat-dots-fill"></i>
+                <span>Nhắn Tin</span>
+            </a>
+        </li>
           <li class="nav-heading">Danh Mục</li>
-
           <li class="nav-item">
               <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-                  <i class="bi bi-menu-button-wide"></i><span>Quản Lý Nhà Trọ</span><i class="bi bi-chevron-down ms-auto"></i>
+                  <i class="bi bi-menu-button-wide"></i><span>Quản Lý Nhà Trọ</span><i
+                      class="bi bi-chevron-down ms-auto"></i>
               </a>
               <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                  <li><a href="{{route('admin_houses')}}"><i class="bi bi-circle"></i><span>Nhà Trọ</span></a></li>
-                  <li><a href="{{route('admin_rooms')}}"><i class="bi bi-circle"></i><span>Phòng Trọ</span></a></li>
+                  <li><a href="{{ route('admin_houses') }}"><i class="bi bi-circle"></i><span>Nhà Trọ</span></a></li>
+                  <li><a href="{{ route('admin_rooms') }}"><i class="bi bi-circle"></i><span>Phòng Trọ</span></a></li>
               </ul>
-          </li><!-- End Components Nav -->
-
-          {{-- <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.html">
-              <i class="bi bi-circle"></i><span>Form Elements</span>
-            </a>
           </li>
-          <li>
-            <a href="forms-layouts.html">
-              <i class="bi bi-circle"></i><span>Form Layouts</span>
-            </a>
+          <li class="nav-item">
+              <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="#">
+                  <i class="bi bi-menu-button-wide"></i><span>Quản Lý Người Dùng</span><i
+                      class="bi bi-chevron-down ms-auto"></i>
+              </a>
+              <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                  <li><a href=""><i class="bi bi-circle"></i><span>Quản Lý</span></a></li>
+                  <li><a href=""><i class="bi bi-circle"></i><span>Khách Thuê</span></a></li>
+              </ul>
           </li>
-          <li>
-            <a href="forms-editors.html">
-              <i class="bi bi-circle"></i><span>Form Editors</span>
-            </a>
+          <li class="nav-item">
+              <a class="nav-link collapsed" data-bs-target="#components-nav2" data-bs-toggle="collapse" href="#">
+                  <i class="bi bi-menu-button-wide"></i><span>Hợp Đồng - Hóa Đơn</span><i
+                      class="bi bi-chevron-down ms-auto"></i>
+              </a>
+              <ul id="components-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                  <li><a href=""><i class="bi bi-circle"></i><span>Hợp Đồng</span></a></li>
+                  <li><a href=""><i class="bi bi-circle"></i><span>Hóa Đơn</span></a></li>
+              </ul>
           </li>
-          <li>
-            <a href="forms-validation.html">
-              <i class="bi bi-circle"></i><span>Form Validation</span>
-            </a>
+          <li class="nav-item">
+              <a class="nav-link collapsed" data-bs-target="#components-nav3" data-bs-toggle="collapse" href="#">
+                  <i class="bi bi-menu-button-wide"></i><span>Số Điện - Nước</span><i
+                      class="bi bi-chevron-down ms-auto"></i>
+              </a>
+              <ul id="components-nav3" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                  <li><a href=""><i class="bi bi-circle"></i><span>Số Điện</span></a></li>
+                  <li><a href=""><i class="bi bi-circle"></i><span>Số Nước</span></a></li>
+              </ul>
           </li>
-        </ul>
-      </li><!-- End Forms Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>General Tables</span>
-            </a>
+          <li class="nav-item">
+              <a class="nav-link collapsed" data-bs-target="#components-nav4" data-bs-toggle="collapse" href="#">
+                  <i class="bi bi-menu-button-wide"></i><span>Quản Lý Thu Chi</span><i
+                      class="bi bi-chevron-down ms-auto"></i>
+              </a>
+              <ul id="components-nav4" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                  <li><a href=""><i class="bi bi-circle"></i><span>Thu Về</span></a></li>
+                  <li><a href=""><i class="bi bi-circle"></i><span>Chi Ra</span></a></li>
+              </ul>
           </li>
-          <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
+          <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav5" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-menu-button-wide"></i><span>Quản Lý Khác</span><i
+                    class="bi bi-chevron-down ms-auto"></i>
             </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="charts-chartjs.html">
-              <i class="bi bi-circle"></i><span>Chart.js</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-apexcharts.html">
-              <i class="bi bi-circle"></i><span>ApexCharts</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-echarts.html">
-              <i class="bi bi-circle"></i><span>ECharts</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Charts Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Remix Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-boxicons.html">
-              <i class="bi bi-circle"></i><span>Boxicons</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Icons Nav --> --}}
-
+            <ul id="components-nav5" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li><a href=""><i class="bi bi-circle"></i><span>Kho Đồ</span></a></li>
+                <li><a href=""><i class="bi bi-circle"></i><span>Vân Tay</span></a></li>
+                <li><a href=""><i class="bi bi-circle"></i><span>Phương Tiện</span></a></li>
+                <li><a href=""><i class="bi bi-circle"></i><span>Yêu Cầu</span></a></li>
+            </ul>
+        </li>
           <li class="nav-heading">Thiết Lập</li>
-
-          {{-- <li class="nav-item">
-        <a class="nav-link collapsed" href="users-profile.html">
-          <i class="bi bi-person"></i>
-          <span>Profile</span>
-        </a>
-      </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-register.html">
-          <i class="bi bi-card-list"></i>
-          <span>Register</span>
-        </a>
-      </li><!-- End Register Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav --> --}}
-
           <li class="nav-item">
               <a class="nav-link collapsed" href="pages-blank.html">
-                  <i class="bi bi-file-earmark"></i>
-                  <span>Blank</span>
+                  <i class="bi bi-gear-fill"></i>
+                  <span>Phân Quyền</span>
               </a>
-          </li><!-- End Blank Page Nav -->
-
+          </li>
+          <li class="nav-item">
+            <a class="nav-link collapsed" href="pages-blank.html">
+                <i class="bi bi-gear-fill"></i>
+                <span>Đẩy Phòng</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="pages-blank.html">
+                <i class="bi bi-gear-fill"></i>
+                <span>Trang Web</span>
+            </a>
+        </li>
       </ul>
 
   </aside><!-- End Sidebar-->

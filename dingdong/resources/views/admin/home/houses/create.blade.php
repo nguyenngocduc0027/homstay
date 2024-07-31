@@ -116,6 +116,7 @@
                                 <label for="formFile" class="form-label">File hợp đồng</label>
                                 <input class="form-control" type="file" id="formFile">
                             </div>
+
                             <h5 class="card-title">Kiểm tra thiết bị </h5>
                             <div class="col-md-1">
                                 <label for="validationCustom11" class="form-label">Giường</label>
