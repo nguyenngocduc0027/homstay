@@ -41,4 +41,13 @@ class AdminController extends Controller
     public function detail_rooms(){
         return view('admin.home.rooms.detail');
     }
+
+
+    public function customer(){
+        return view('admin.account.customer.show');
+    }
+
+    public function create_customer(){
+        return view('admin.account.customer.create');
+    }
 }

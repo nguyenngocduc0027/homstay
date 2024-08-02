@@ -31,3 +31,5 @@ Route::get('/phong-tro', [AdminController::class, 'rooms'])->name('admin_rooms')
 Route::get('/them-phong-tro', [AdminController::class, 'create_rooms'])->name('create_rooms');
 Route::get('/chinh-sua-phong-tro', [AdminController::class, 'update_rooms'])->name('update_rooms');
 Route::get('/chi-tiet-phong-tro', [AdminController::class, 'detail_rooms'])->name('detail_rooms');
+Route::get('/khach-thue', [AdminController::class, 'customer'])->name('admin_customer');
+Route::get('/them-khach-thue', [AdminController::class,'create_customer'])->name('create_customer');

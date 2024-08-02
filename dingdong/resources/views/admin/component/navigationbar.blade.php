@@ -33,7 +33,7 @@
               </a>
               <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                   <li><a href=""><i class="bi bi-circle"></i><span>Quản Lý</span></a></li>
-                  <li><a href=""><i class="bi bi-circle"></i><span>Khách Thuê</span></a></li>
+                  <li><a href="{{ route('admin_customer')}}"><i class="bi bi-circle"></i><span>Khách Thuê</span></a></li>
               </ul>
           </li>
           <li class="nav-item">
@@ -76,23 +76,24 @@
                 <li><a href=""><i class="bi bi-circle"></i><span>Vân Tay</span></a></li>
                 <li><a href=""><i class="bi bi-circle"></i><span>Phương Tiện</span></a></li>
                 <li><a href=""><i class="bi bi-circle"></i><span>Yêu Cầu</span></a></li>
+                <li><a href=""><i class="bi bi-circle"></i><span>Dịch Vụ</span></a></li>
             </ul>
         </li>
           <li class="nav-heading">Công Cụ</li>
           <li class="nav-item">
-              <a class="nav-link collapsed" href="pages-blank.html">
+              <a class="nav-link collapsed" href="">
                   <i class="bi bi-person-bounding-box"></i>
                   <span>Phân Quyền</span>
               </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-blank.html">
+            <a class="nav-link collapsed" href="">
                 <i class="bi bi-archive"></i>
                 <span>Đẩy Phòng</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link collapsed" href="pages-blank.html">
+            <a class="nav-link collapsed" href="">
                 <i class="bi bi-gear-fill"></i>
                 <span>Trang Web</span>
             </a>
