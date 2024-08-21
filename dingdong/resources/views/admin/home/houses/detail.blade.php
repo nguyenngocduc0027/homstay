@@ -54,8 +54,10 @@
                             </div>
                             <div class="col-md-2">
                                 <label for="formFile" class="form-label">File hợp đồng</label>
-                                <a href="" class="form-control"><i class="bi bi-cloud-download-fill"></i> Tải file xuống</a>
+                                <a href="" class="form-control"><i class="bi bi-cloud-download-fill"></i> Tải file
+                                    xuống</a>
                             </div>
+
                             <h5 class="card-title">Kiểm tra thiết bị </h5>
                             <div class="col-md-1">
                                 <label for="validationCustom11" class="form-label">Giường</label>
@@ -85,9 +87,43 @@
                                 <label for="validationCustom14" class="form-label">Điều hòa</label>
                                 <input type="number" class="form-control" id="validationCustom14" disabled>
                             </div>
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <label for="validationCustom18" class="form-label">Ghi chú</label>
                                 <textarea class="form-control" style="height: auto" disabled></textarea>
+                            </div>
+                            <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="carousel">
+                                <label for="validationCustom14" class="form-label">Ảnh</label>
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        class="active" aria-label="Slide 1" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2" class=""></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/admin/img/slides-1.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/admin/img/slides-2.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/admin/img/slides-3.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+
                             </div>
                         </form>
                         <!-- End Custom Styled Validation -->

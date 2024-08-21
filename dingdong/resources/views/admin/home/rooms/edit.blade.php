@@ -1,5 +1,20 @@
 @extends('admin.index')
 @section('contentadmindashboard')
+
+<style>
+    .preview3 {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    .preview3 img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+    }
+</style>
+
+
     <div class="pagetitle">
         <h1>Cập nhật Phòng Trọ</h1>
     </div><!-- End Page Title -->
@@ -59,6 +74,11 @@
                                     Nhập dữ liệu!
                                 </div>
                             </div>
+                            <div class="col-md-12">
+                                <label for="validationCustom19" class="form-label">Ảnh nhà trọ</label>
+                                <input type="file" class="form-control" id="file-input-2" multiple>
+                                <div id="preview-container"></div>
+                            </div>
                             <h5 class="card-title">Kiểm tra thiết bị </h5>
                             <div class="col-md-1">
                                 <label for="validationCustom11" class="form-label">Giường</label>
@@ -103,4 +123,30 @@
             </div>
         </div>
     </section>
+
+    <script>
+        $(document).ready(function() {
+            $("#file-input-2").on("change", function() {
+                var files = $(this)[0].files;
+                $("#preview-container").empty();
+                if (files.length > 0) {
+                    for (var i = 0; i < files.length; i++) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $("<div class='preview3'><img src='" + e.target.result +
+                                "'><button class='delete bi bi-trash'></button></div>").appendTo(
+                                "#preview-container");
+                        };
+                        reader.readAsDataURL(files[i]);
+                    }
+                }
+            });
+            $("#preview-container").on("click", ".delete", function() {
+                $(this).parent(".preview3").remove();
+                $("#file-input-2").val(""); // Clear input value if needed
+            });
+        });
+    </script>
+
+
 @endsection

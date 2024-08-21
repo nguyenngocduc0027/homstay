@@ -12,29 +12,66 @@
                         <!-- Custom Styled Validation -->
                         <form class="row g-3 needs-validation" novalidate="">
                             <h5 class="card-title">Thông tin chung</h5>
-                            <div class="col-md-2">
-                                <label for="validationCustom01" class="form-label">Tên phòng trọ</label>
-                                <input type="text" class="form-control" id="validationCustom01" required="" disabled>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom02" class="form-label">Nhà trọ</label>
-                                <select class="form-select" aria-label="Default select example" id="validationCustom02" disabled>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
-                                  </select>
-                            </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom03" class="form-label">Giá thuê</label>
-                                <input type="number" class="form-control" id="validationCustom03" required="" disabled>
+                            <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <label for="validationCustom01" class="form-label">Tên phòng trọ</label>
+                                    <input type="text" class="form-control" id="validationCustom01" required="" disabled>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom02" class="form-label">Nhà trọ</label>
+                                    <select class="form-select" aria-label="Default select example" id="validationCustom02" disabled>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                      </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom03" class="form-label">Giá thuê</label>
+                                    <input type="number" class="form-control" id="validationCustom03" required="" disabled>
+
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="validationCustom04" class="form-label">Trạng thái</label>
+                                    <select class="form-select" aria-label="Default select example" id="validationCustom04" disabled>
+                                        <option value="1" class="text-success">Đã thuê</option>
+                                        <option value="2" class="text-danger">Trống</option>
+                                      </select>
+                                </div>
 
                             </div>
-                            <div class="col-md-2">
-                                <label for="validationCustom04" class="form-label">Trạng thái</label>
-                                <select class="form-select" aria-label="Default select example" id="validationCustom04" disabled>
-                                    <option value="1" class="text-success">Đã thuê</option>
-                                    <option value="2" class="text-danger">Trống</option>
-                                  </select>
+
+                            <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="carousel">
+                                <label for="validationCustom14" class="form-label">Ảnh</label>
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        class="active" aria-label="Slide 1" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2" class=""></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/admin/img/slides-1.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/admin/img/slides-2.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/admin/img/slides-3.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
 
                             </div>
                             <h5 class="card-title">Kiểm tra thiết bị </h5>

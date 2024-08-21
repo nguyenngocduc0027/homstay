@@ -32,7 +32,7 @@
                       class="bi bi-chevron-down ms-auto"></i>
               </a>
               <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                  <li><a href=""><i class="bi bi-circle"></i><span>Quản Lý</span></a></li>
+                  <li><a href="{{route('admin_manager')}}"><i class="bi bi-circle"></i><span>Quản Lý</span></a></li>
                   <li><a href="{{ route('admin_customer')}}"><i class="bi bi-circle"></i><span>Khách Thuê</span></a></li>
               </ul>
           </li>
@@ -52,7 +52,7 @@
                       class="bi bi-chevron-down ms-auto"></i>
               </a>
               <ul id="components-nav3" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                  <li><a href=""><i class="bi bi-circle"></i><span>Số Điện</span></a></li>
+                  <li><a href="{{route('admin_electric')}}"><i class="bi bi-circle"></i><span>Số Điện</span></a></li>
                   <li><a href=""><i class="bi bi-circle"></i><span>Số Nước</span></a></li>
               </ul>
           </li>

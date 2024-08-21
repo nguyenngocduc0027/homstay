@@ -33,3 +33,10 @@ Route::get('/chinh-sua-phong-tro', [AdminController::class, 'update_rooms'])->na
 Route::get('/chi-tiet-phong-tro', [AdminController::class, 'detail_rooms'])->name('detail_rooms');
 Route::get('/khach-thue', [AdminController::class, 'customer'])->name('admin_customer');
 Route::get('/them-khach-thue', [AdminController::class,'create_customer'])->name('create_customer');
+Route::get('/chinh-sua-khach-thue', [AdminController::class, 'update_customer'])->name('update_customer');
+Route::get('/chi-tiet-khach-thue', [AdminController::class,'detail_customer'])->name('detail_customer');
+Route::get('/quan-ly', [AdminController::class,'manager'])->name('admin_manager');
+Route::get('/them-quan-ly', [AdminController::class, 'create_manager'])->name('create_manager');
+Route::get('/chinh-sua-quan-ly', [AdminController::class, 'update_manager'])->name('update_manager');
+Route::get('/chi-tiet-quan-ly', [AdminController::class, 'detail_manager'])->name('detail_manager');
+Route::get('/cong-to-dien', [AdminController::class, 'electric'])->name('admin_electric');

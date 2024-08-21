@@ -18,9 +18,11 @@
         }
 
         .preview img {
-            width: 50%;
+            width: 100px;
+            height: 100px;
             margin-right: 10px;
         }
+
     </style>
     <div class="pagetitle">
         <h1>Thêm mới khách thuê</h1>
@@ -149,7 +151,7 @@
                         var reader = new FileReader();
                         reader.onload = function(e) {
                             $("<div class='preview'><img src='" + e.target.result +
-                                "'><button class='delete'>Delete</button></div>").appendTo(
+                                "'><button class='delete bi bi-trash'></button></div>").appendTo(
                                 "#preview-container");
                         };
                         reader.readAsDataURL(files[i]);

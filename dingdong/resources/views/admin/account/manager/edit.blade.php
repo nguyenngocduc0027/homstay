@@ -25,7 +25,7 @@
 
     </style>
     <div class="pagetitle">
-        <h1>Cập nhật thông tin khách thuê</h1>
+        <h1>Chỉnh sửa thông tin quản lý</h1>
     </div><!-- End Page Title -->
 
     <section class="section">

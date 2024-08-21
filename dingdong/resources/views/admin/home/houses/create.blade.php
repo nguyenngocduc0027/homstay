@@ -188,7 +188,7 @@
                         var reader = new FileReader();
                         reader.onload = function(e) {
                             $("<div class='preview'><img src='" + e.target.result +
-                                "'><button class='delete'>Delete</button></div>").appendTo(
+                                "'><button class='delete bi bi-trash'></button></div>").appendTo(
                                 "#preview-container");
                         };
                         reader.readAsDataURL(files[i]);

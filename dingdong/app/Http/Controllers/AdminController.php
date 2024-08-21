@@ -50,4 +50,32 @@ class AdminController extends Controller
     public function create_customer(){
         return view('admin.account.customer.create');
     }
+
+    public function update_customer() {
+        return view('admin.account.customer.edit');
+    }
+
+    public function detail_customer(){
+        return view('admin.account.customer.detail');
+    }
+
+    public function manager(){
+        return view('admin.account.manager.show');
+    }
+
+    public function create_manager(){
+        return view('admin.account.manager.create');
+    }
+
+    public function update_manager(){
+        return view('admin.account.manager.edit');
+    }
+
+    public function detail_manager(){
+        return view('admin.account.manager.detail');
+    }
+
+    public function electric(){
+        return view('admin.meter.electric.show');
+    }
 }

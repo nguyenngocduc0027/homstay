@@ -25,7 +25,7 @@
 
     </style>
     <div class="pagetitle">
-        <h1>Cập nhật thông tin khách thuê</h1>
+        <h1>Thông tin chi tiết quản lý</h1>
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -60,7 +60,6 @@
                                 <label for="validationCustom03" class="form-label">Số điện thoại</label>
                                 <input type="number" class="form-control" id="validationCustom03" required="">
                                 <div class="valid-feedback">
-
                                 </div>
                                 <div class="invalid-feedback">
                                     Nhập dữ liệu!
@@ -70,7 +69,6 @@
                                 <label for="validationCustom05" class="form-label">Ngày sinh</label>
                                 <input type="date" class="form-control" id="validationCustom05" required="">
                                 <div class="valid-feedback">
-
                                 </div>
                                 <div class="invalid-feedback">
                                     Nhập dữ liệu!
@@ -80,7 +78,6 @@
                                 <label for="validationCustom08" class="form-label">Số CCCD</label>
                                 <input type="number" class="form-control" id="validationCustom08" required="">
                                 <div class="valid-feedback">
-
                                 </div>
                                 <div class="invalid-feedback">
                                     Nhập dữ liệu!
@@ -118,13 +115,43 @@
                             </div>
                             <div class="col-md-4">
                                 <label for="formFile" class="form-label">Ảnh dại diện</label>
-                                <input class="form-control" type="file" id="avatar-input">
-                                <div id="preview-avatar"></div>
+                                <div id="preview-avatar">
+                                    <div class='preview-ava'><img src='/admin/img/product-1.jpg'></div>
+                                </div>
                             </div>
-                            <div class="col-md-8">
-                                <label for="validationCustom19" class="form-label">Ảnh CCCD</label>
-                                <input type="file" class="form-control" id="file-input" multiple>
-                                <div id="preview-container"></div>
+                            <div id="carouselExampleIndicators" class="carousel slide col-md-6" data-bs-ride="carousel">
+                                <label for="validationCustom14" class="form-label">Ảnh CCCD</label>
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                        class="active" aria-label="Slide 1" aria-current="true"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                        aria-label="Slide 2" class=""></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="/admin/img/slides-1.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/admin/img/slides-2.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="/admin/img/slides-3.jpg" class="d-block w-100" style="object-fit: cover" alt="...">
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+
                             </div>
                             <div class="col-md-12">
                                 <label for="validationCustom18" class="form-label">Ghi chú</label>
